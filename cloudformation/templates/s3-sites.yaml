@@ -1,0 +1,36 @@
+Parameters:
+  PrimarySiteDomainName:
+    Type: String
+    Description: Primary domain name
+
+Resources:
+  #
+  # main bucket
+  #
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: PublicRead
+      BucketName: !Ref PrimarySiteDomainName
+      WebsiteConfiguration:
+        IndexDocument: index.html
+
+  #
+  # redirect buckets
+  #
+  RedirectBucketHasMuellerFiredTrumpYetCom:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: PublicRead
+      BucketName: hastrumpfiredmuelleryet.com
+      WebsiteConfiguration:
+        RedirectAllRequestsTo: 
+          HostName: !Ref PrimarySiteDomainName
+          Protocol: http
+
+Outputs:
+  SiteBucketName: 
+    Value: !Ref PrimarySiteDomainName
+    Description: Bucket for primary site content
