@@ -1,0 +1,6 @@
+template_path: templates/s3-redirect.yaml
+
+parameters:
+    PrimarySiteDomainName: www.hastrumpfiredmuelleryet.com
+    RedirectSiteDomainName: hastrumpfiredmuelleryet.com
+

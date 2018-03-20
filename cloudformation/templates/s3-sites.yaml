@@ -16,20 +16,6 @@ Resources:
       WebsiteConfiguration:
         IndexDocument: index.html
 
-  #
-  # redirect buckets
-  #
-  RedirectBucketHasMuellerFiredTrumpYetCom:
-    Type: AWS::S3::Bucket
-    DeletionPolicy: Delete
-    Properties:
-      AccessControl: PublicRead
-      BucketName: hastrumpfiredmuelleryet.com
-      WebsiteConfiguration:
-        RedirectAllRequestsTo: 
-          HostName: !Ref PrimarySiteDomainName
-          Protocol: http
-
 Outputs:
   SiteBucketName: 
     Value: !Ref PrimarySiteDomainName

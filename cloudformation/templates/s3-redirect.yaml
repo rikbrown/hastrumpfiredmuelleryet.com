@@ -1,0 +1,28 @@
+Parameters:
+  RedirectSiteDomainName:
+    Type: String
+    Description: Primary domain name
+  PrimarySiteDomainName:
+    Type: String
+    Description: Primary domain name
+
+Resources:
+  #
+  # redirect buckets
+  #
+  SiteRedirectBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      AccessControl: PublicRead
+      BucketName: !Ref RedirectSiteDomainName
+      WebsiteConfiguration:
+        RedirectAllRequestsTo: 
+          HostName: !Ref PrimarySiteDomainName
+          Protocol: http
+
+
+Outputs:
+  SiteBucketName: 
+    Value: !Ref RedirectSiteDomainName
+    Description: Bucket for redirect site content
