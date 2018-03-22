@@ -8,7 +8,7 @@ If it doesn't, [MoveOn](https://act.moveon.org/event/mueller-firing-rapid-respon
 
 Cloudformation for this site (using Sceptre) creates:
 
-* a S3 bucket to store the static assets (`public_html/**/*`) and redirects for non-primaty domains.
+* a S3 bucket to store the static assets (`public_html/**/*`) and redirects for non-primary domains.
 * DNS 
   * the hosted zone for `hastrumpfiredmuelleryet.com`
   * A records pointing `www.` and root to the S3 buckets
