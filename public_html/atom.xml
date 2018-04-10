@@ -3,7 +3,7 @@
     <title>Has Trump Fired Mueller Yet?</title>
     <link rel="alternate" type="text/html" href="http://www.hastrumpfiredmuelleryet.com/"/>
     <link rel="self" type="application/atom+xml" href="http://www.hastrumpfiredmuelleryet.com/atom.xml"/>
-    <updated>2017-03-19T23:57:00-08:00</updated>
+    <updated>2018-04-10T11:37:00-08:00</updated>
     <id>http://www.hastrumpfiredmuelleryet.com/</id>
 
     <entry>
@@ -15,5 +15,15 @@
         <content>Not yet.</content>
         <author><name>Joe Bloggs</name></author>
     </entry>
+    
+    <entry>
+        <title>Has Trump Fired Mueller Yet?</title>
+        <link rel="alternate" type="text/html" href="http://www.hastrumpfiredmuelleryet.com/"/>
+        <id>www.hastrumpfiredmuelleryet.com:2</id>
+        <updated>2018-04-10T11:37:00-08:00</updated>
+        <summary>No.</summary>
+        <content>No, but Trump ain't happy about Cohen is he?</content>
+        <author><name>Joe Bloggs</name></author>
+    </entry>    
 
 </feed>
